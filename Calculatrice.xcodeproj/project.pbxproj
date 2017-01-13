@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAEDA3C11E290CCD006A762B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA3C01E290CCD006A762B /* AppDelegate.swift */; };
-		FAEDA3C31E290CCD006A762B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA3C21E290CCD006A762B /* ViewController.swift */; };
+		FAEDA3C31E290CCD006A762B /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEDA3C21E290CCD006A762B /* CalculatorViewController.swift */; };
 		FAEDA3C61E290CCD006A762B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA3C41E290CCD006A762B /* Main.storyboard */; };
 		FAEDA3C81E290CCE006A762B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA3C71E290CCE006A762B /* Assets.xcassets */; };
 		FAEDA3CB1E290CCE006A762B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEDA3C91E290CCE006A762B /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		FAEDA3BD1E290CCD006A762B /* Calculatrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculatrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEDA3C01E290CCD006A762B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAEDA3C21E290CCD006A762B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAEDA3C21E290CCD006A762B /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		FAEDA3C51E290CCD006A762B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAEDA3C71E290CCE006A762B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEDA3CA1E290CCE006A762B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				FAEDA3C01E290CCD006A762B /* AppDelegate.swift */,
-				FAEDA3C21E290CCD006A762B /* ViewController.swift */,
+				FAEDA3C21E290CCD006A762B /* CalculatorViewController.swift */,
 				FAEDA3C41E290CCD006A762B /* Main.storyboard */,
 				FAEDA3C71E290CCE006A762B /* Assets.xcassets */,
 				FAEDA3C91E290CCE006A762B /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAEDA3C31E290CCD006A762B /* ViewController.swift in Sources */,
+				FAEDA3C31E290CCD006A762B /* CalculatorViewController.swift in Sources */,
 				FAEDA3C11E290CCD006A762B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +288,7 @@
 				FAEDA3D11E290CCE006A762B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,8 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CalculatorViewController: UIViewController{
+    
+    @IBOutlet weak var display: UILabel!
+    
+    @IBAction func addtion(sender: UIButton) {
+        
+    }
+    @IBAction func touchNumber(sender: UIButton) {
+        print("User touched button \(sender.tag)")
+        display.text = display.text! + "\(sender.tag)"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
