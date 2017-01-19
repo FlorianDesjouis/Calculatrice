@@ -10,7 +10,19 @@ import UIKit
 
 class CalculatorViewController: UIViewController{
     
+    @IBAction func substract(sender: UIButton) {
+        print("-")
+    }
+    @IBAction func addition(sender: UIButton) {
+        print("+")
+        
+    }
     @IBOutlet weak var display: UILabel!
+    
+    
+    @IBAction func clear(sender: UIButton) {
+        display.text = ""
+    }
     
     @IBAction func addtion(sender: UIButton) {
         
