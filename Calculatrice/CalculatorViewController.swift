@@ -63,6 +63,7 @@ enum Operator {
 //MARK : Calculator Model
 class Calculator {
     var firstNumber: Int = 0
+    var operation = Operator?()
     
     func add(number: Int) {
         firstNumber = number
