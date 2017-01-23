@@ -144,7 +144,7 @@
                                     <rect key="frame" x="288" y="477" width="30" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="substract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gA0-Jb-l7c"/>
+                                    <action selector="substract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDF-KX-byf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFc-K2-71V">
@@ -155,7 +155,7 @@
                                     <rect key="frame" x="86" y="555" width="176" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="Result:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAL-8c-twQ"/>
+                                    <action selector="resultat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jp8-aE-I6l"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kft-Iw-MwE">
@@ -190,7 +190,7 @@
                                     <rect key="frame" x="288" y="555" width="30" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qWR-to-thw"/>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LZ-GV-Q8R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvW-pa-ecj">
@@ -201,8 +201,7 @@
                                     <rect key="frame" x="86" y="477" width="30" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="addition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIA-8P-BVM"/>
-                                    <action selector="addtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4f-ps-aZM"/>
+                                    <action selector="addition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w36-7T-Fhy"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -28,84 +28,81 @@ class CalculatorViewController: UIViewController{
 //MARK : User Action
 extension CalculatorViewController {
     
-    @IBAction func Result(_ sender: Any) {
-        print("result")
-        calculator.result(sender.tag)
+    // Handle only one digit
+    @IBAction func touchNumber(_ sender: UIButton) {
+        let text = display.text ?? ""
+        display.text = text + String(sender.tag)
     }
     
     @IBAction func substract(sender: UIButton) {
-        print("-")
-        calculator.add(.soustraction)
+        let text = display.text ?? "0"
+        calculator.add(Int(text)!, operation: .substraction)
         display.text = "-"
     }
-    @IBAction func addition(sender: UIButton) {
-        print("+")
-        calculator.add(.addition)
+    @IBAction func addition(_ sender: UIButton) {
+        let text = display.text ?? "0"
+        calculator.add(Int(text)!, operation: .addition)
         display.text = "+"
     }
     
-    @IBAction func clear(_ sender: Any) {
-        display.text = ""
-        print("clear")
+    @IBAction func resultat(sender: UIButton) {
+        let text = display.text ?? "0"
+        calculator.result(Int(text)!)
+        display.text = calculator.actualDisplay()
     }
     
-    @IBAction func touchNumber(sender: UIButton) {
-        
-        calculator.add(sender.tag)
-        display.text = String(sender.tag)
+    @IBAction func clear(sender: UIButton) {
+        calculator.clear()
+        display.text = ""
+        print("Clear Result")
     }
+    
 }
 //MARK : Operation handled
 enum Operator {
     case addition
-    case soustraction
+    case substraction
 }
 //MARK : Calculator Model
 class Calculator {
     var firstNumber: Int = 0
-    var operation = Operator?()
+    var operation: Operator?
     
-    func add(number: Int) {
+    func add(number: Int, operation: Operator) {
         firstNumber = number
-    }
-    
-    func add(operation: Operator) {
         self.operation = operation
     }
     
     func isCalculating() -> Bool {
-        return operation != nil
+        return (operation != nil)
     }
     
-    func actualDisplay() -> String {
-        return ""
-    }
-    private func addition(first: Int, second: Int) {
-        
+    func clear() {
+        self.operation = nil
+        self.firstNumber = 0
     }
     
-    private func soustraction() {
-        
-    }
-    
-    private func result(otherNumber: Int) {
+    func result(otherNumber: Int) {
         if let opp = operation {
-            switch operation {
-                case .addition:
-                    addition(firstNumber, second:otherNumber)
-                case .soustraction:
-                    soustraction()
-                case .result:
-                    result()
-                case .clear:
-                    clear()
+            switch opp {
+            case .addition:
+                firstNumber = addition(firstNumber, second: otherNumber)
+            case .substraction:
+                firstNumber = substraction(firstNumber, second: otherNumber)
             }
         }
     }
     
-    private func clear() {
-        self.operation = nil
-        self.firstNumber = 0
+    func actualDisplay() -> String {
+        return "\(firstNumber)"
+    }
+    
+    // MARK: != Operation
+    private func addition(first: Int, second: Int) -> Int {
+        return first + second
+    }
+    
+    private func substraction(first: Int, second: Int) -> Int {
+        return first - second
     }
 }
-
