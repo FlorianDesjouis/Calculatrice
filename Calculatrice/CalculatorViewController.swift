@@ -30,28 +30,33 @@ extension CalculatorViewController {
     
     // Handle only one digit
     @IBAction func touchNumber(_ sender: UIButton) {
-        let text = display.text ?? ""
-        display.text = text + String(sender.tag)
+        if calculator.isCalculating() {
+            calculator.result(sender.tag)
+        } else {
+            calculator.add(number: sender.tag)
+        }
+        display.text = String(sender.tag)
     }
     
-    @IBAction func substract(sender: UIButton) {
-        let text = display.text ?? "0"
-        calculator.add(Int(text)!, operation: .substraction)
+    @IBAction func substract(_ sender: UIButton) {
+        calculator.add(operation: .substraction)
         display.text = "-"
     }
     @IBAction func addition(_ sender: UIButton) {
-        let text = display.text ?? "0"
-        calculator.add(Int(text)!, operation: .addition)
+        calculator.add(operation: .addition)
         display.text = "+"
     }
     
-    @IBAction func resultat(sender: UIButton) {
-        let text = display.text ?? "0"
-        calculator.result(Int(text)!)
+    @IBAction func multiply(_ sender: UIButton) {
+        calculator.add(operation: .multiply)
+        display.text = "x"
+    }
+    
+    @IBAction func resultat(_ sender: UIButton) {
         display.text = calculator.actualDisplay()
     }
     
-    @IBAction func clear(sender: UIButton) {
+    @IBAction func clear(_ sender: UIButton) {
         calculator.clear()
         display.text = ""
         print("Clear Result")
@@ -68,8 +73,11 @@ class Calculator {
     var firstNumber: Int = 0
     var operation: Operator?
     
-    func add(number: Int, operation: Operator) {
+    func add(number: Int) {
         firstNumber = number
+    }
+    
+    func add(operation: Operator) {
         self.operation = operation
     }
     
@@ -82,7 +90,7 @@ class Calculator {
         self.firstNumber = 0
     }
     
-    func result(otherNumber: Int) {
+    func result(_ otherNumber: Int) {
         if let opp = operation {
             switch opp {
             case .addition:
@@ -98,11 +106,15 @@ class Calculator {
     }
     
     // MARK: != Operation
-    private func addition(first: Int, second: Int) -> Int {
+    fileprivate func addition(_ first: Int, second: Int) -> Int {
         return first + second
     }
     
-    private func substraction(first: Int, second: Int) -> Int {
+    fileprivate func substraction(_ first: Int, second: Int) -> Int {
         return first - second
+    }
+    
+    fileprivate func multiply(_ first: Int, second: Int) -> Int {
+        return first * second
     }
 }
