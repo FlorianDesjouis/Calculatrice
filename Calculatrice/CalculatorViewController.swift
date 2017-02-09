@@ -13,6 +13,7 @@ class CalculatorViewController: UIViewController{
     @IBOutlet weak var display: UILabel!
     
     
+    
     let calculator = Calculator()
     
     override func viewDidLoad() {
@@ -52,6 +53,11 @@ extension CalculatorViewController {
         display.text = "x"
     }
     
+    @IBAction func divide(_ sender: UIButton) {
+        calculator.add(operation: .divide)
+        display.text = "/"
+    }
+    
     @IBAction func resultat(_ sender: UIButton) {
         display.text = calculator.actualDisplay()
     }
@@ -67,6 +73,8 @@ extension CalculatorViewController {
 enum Operator {
     case addition
     case substraction
+    case multiply
+    case divide
 }
 //MARK : Calculator Model
 class Calculator {
@@ -97,7 +105,11 @@ class Calculator {
                 firstNumber = addition(firstNumber, second: otherNumber)
             case .substraction:
                 firstNumber = substraction(firstNumber, second: otherNumber)
-            }
+            case .multiply:
+                firstNumber = multiply(firstNumber, second: otherNumber)
+            case .divide:
+            firstNumber = divide(firstNumber, second: otherNumber)
+        }
         }
     }
     
@@ -117,4 +129,9 @@ class Calculator {
     fileprivate func multiply(_ first: Int, second: Int) -> Int {
         return first * second
     }
+
+    fileprivate func divide(_ first: Int, second: Int) -> Int {
+        return first / second
+}
+
 }
