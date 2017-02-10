@@ -55,6 +55,7 @@ extension CalculatorViewController {
     
     @IBAction func divide(_ sender: UIButton) {
         calculator.add(operation: .divide)
+
         display.text = "/"
     }
     
@@ -131,7 +132,15 @@ class Calculator {
     }
 
     fileprivate func divide(_ first: Int, second: Int) -> Int {
-        return first / second
+        var divided = Int();
+        if first == 0 {
+            print("cannot divide by 0")
+        }else if second == 0 {
+            print("cannot divide by 0")
+        }else{
+         divided = first / second
+        }
+        return divided
 }
 
 }
