@@ -84,24 +84,20 @@
                                     <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lY9-X9-Lsf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-KU-Ws7">
-                                <rect key="frame" x="82" y="204" width="30" height="28"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-4J-BQK">
+                                <rect key="frame" x="82" y="204" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22538662802992898" green="0.11279203967399684" blue="0.61209505890052363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="7"/>
-                                <connections>
-                                    <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="456-z4-vp5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reT-jg-Sia">
-                                <rect key="frame" x="182" y="204" width="30" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22538662800000001" green="0.1127920397" blue="0.61209505890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="8"/>
-                                <connections>
-                                    <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yxV-uC-9FB"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvL-KU-Ws7">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.22538662802992898" green="0.11279203967399684" blue="0.61209505890052363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="7"/>
+                                        <connections>
+                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="456-z4-vp5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ra-5T-IqS">
                                 <rect key="frame" x="284" y="204" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -177,6 +173,15 @@
                                 <state key="normal" title="/"/>
                                 <connections>
                                     <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2I-zJ-AjN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reT-jg-Sia">
+                                <rect key="frame" x="182" y="204" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22538662800000001" green="0.1127920397" blue="0.61209505890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="8"/>
+                                <connections>
+                                    <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yxV-uC-9FB"/>
                                 </connections>
                             </button>
                         </subviews>

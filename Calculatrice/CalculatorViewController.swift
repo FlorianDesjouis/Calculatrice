@@ -29,34 +29,49 @@ class CalculatorViewController: UIViewController{
 //MARK : User Action
 extension CalculatorViewController {
     
-    // Handle only one digit
     @IBAction func touchNumber(_ sender: UIButton) {
-        if calculator.isCalculating() {
-            calculator.result(sender.tag)
-        } else {
-            calculator.add(number: sender.tag)
-        }
-        display.text = String(sender.tag)
+        let text = display.text ?? "0"
+        display.text = text + String(sender.tag)
     }
     
     @IBAction func substract(_ sender: UIButton) {
-        calculator.add(operation: .substraction)
-        display.text = "-"
+        let text = display.text ?? "0"
+        if let number = Int(text){
+            calculator.add(number: number, operation: .substraction)
+        } else {
+            calculator.add(number: 0, operation: .substraction)
+        }
+        display.text = ""
     }
     @IBAction func addition(_ sender: UIButton) {
-        calculator.add(operation: .addition)
-        display.text = "+"
+        let text = display.text ?? "0"
+        if let number = Int(text){
+            calculator.add(number: number, operation: .addition)
+        } else{
+            calculator.add(number: 0, operation: .addition)
+        }
+        display.text = ""
     }
     
     @IBAction func multiply(_ sender: UIButton) {
-        calculator.add(operation: .multiply)
-        display.text = "x"
+        let text = display.text ?? "0"
+        if let number = Int(text){
+            calculator.add(number: number, operation: .multiply)
+        }else{
+            calculator.add(number: 0, operation: .multiply)
+        }
+        display.text = ""
     }
     
     @IBAction func divide(_ sender: UIButton) {
-        calculator.add(operation: .divide)
+        let text = display.text ?? "0"
+        if let number = Int(text){
+            calculator.add(number: number, operation: .divide)
+        }else{
+            calculator.add(number: 0, operation: .divide)
+        }
 
-        display.text = "/"
+        display.text = ""
     }
     
     @IBAction func resultat(_ sender: UIButton) {
@@ -82,11 +97,8 @@ class Calculator {
     var firstNumber: Int = 0
     var operation: Operator?
     
-    func add(number: Int) {
+    func add(number: Int, operation: Operator) {
         firstNumber = number
-    }
-    
-    func add(operation: Operator) {
         self.operation = operation
     }
     
