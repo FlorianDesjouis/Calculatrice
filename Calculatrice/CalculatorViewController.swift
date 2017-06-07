@@ -75,6 +75,12 @@ extension CalculatorViewController {
     }
     
     @IBAction func resultat(_ sender: UIButton) {
+        let text = display.text ?? "0"
+        if let OtherNumb = Int(text){
+            calculator.result(OtherNumb)
+        }else {
+            calculator.result(0)
+        }
         display.text = calculator.actualDisplay()
     }
     
